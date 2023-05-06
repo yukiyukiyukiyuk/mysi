@@ -29,7 +29,7 @@ from django.urls import include, path
 urlpatterns = [
     #path("admin/", admin.site.urls),
     #path("flower/", include("flower.urls")),
-    path("http://35.213.92.81/", admin.site.urls),
-    path("http://35.213.92.81/", include("flower.urls")),
+    path(r"^admin/", admin.site.urls),
+    path(r"^", include("flower.urls")),
 ]
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
